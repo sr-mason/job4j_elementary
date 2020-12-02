@@ -47,4 +47,17 @@ public class PointTest {
         double out = new Point(x1, y1).distance(new Point(x2, y2));
         Assert.assertEquals(expected, out, 0.01);
     }
+
+    @Test
+    public void when002to022then2() {
+        int expected = 2;
+        int x1 = 0;
+        int y1 = 0;
+        int z1 = 2;
+        int x2 = 0;
+        int y2 = 2;
+        int z2 = 2;
+        double out = new Point(x1, y1, z1).distance(new Point(x2, y2, z2));
+        Assert.assertEquals(expected, out, 0.01);
+    }
 }
