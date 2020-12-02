@@ -28,4 +28,16 @@ public class MaxTest {
         int result = Max.max(12, 0);
         assertThat(result, is(12));
     }
+
+    @Test
+    public void whenMax3To3Then452() {
+        int result = Max.max(12, 10, 452);
+        assertThat(result, is(452));
+    }
+
+    @Test
+    public void whenMax3To4Then452() {
+        int result = Max.max(12, 10, 452, 12);
+        assertThat(result, is(452));
+    }
 }
