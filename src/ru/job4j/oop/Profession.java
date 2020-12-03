@@ -6,6 +6,13 @@ public class Profession {
     private String education;
     private int birthday;
 
+    public Profession(String name, String surname, String education, int birthday) {
+        this.name = name;
+        this.surname = surname;
+        this.education = education;
+        this.birthday = birthday;
+    }
+
     public String getName() {
         return name;
     }
@@ -20,50 +27,5 @@ public class Profession {
 
     public int getBirthday() {
         return birthday;
-    }
-
-    public class Doctor extends Profession {
-        private String hospital;
-
-        public String getHospital() {
-            return hospital;
-        }
-
-        public String diagnosis(Engineer engineer) {
-            return "Help";
-        }
-
-        public void heal() {
-            System.out.println("Grate doctor");
-        }
-    }
-
-    public class  Engineer extends Profession {
-        private String company;
-
-        public String getCompany() {
-            return company;
-        }
-
-        public int timeProject(String project) {
-            return 100500;
-        }
-    }
-
-    public class  Programmer extends Engineer {
-        private String project;
-        private String language;
-    }
-
-    public class  Builder extends Engineer {
-        private String object;
-    }
-
-    public class  Surgeon extends Doctor {
-
-    }
-
-    public class  Dentist extends Doctor {
-
     }
 }
