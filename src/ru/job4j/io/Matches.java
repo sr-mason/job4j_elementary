@@ -6,8 +6,10 @@ public class Matches {
     public static void main(String[] args) {
         int startNumber = 11;
         int flagPlayer = 0;
+        Scanner scanner = new Scanner(System.in);
         while (startNumber != 0) {
-            Scanner scanner = new Scanner(System.in);
+            String player = (flagPlayer % 2 == 0) ? "Ход 1го игрока" : "Ход 2го игрока";
+            System.out.println(player);
             int select = Integer.parseInt(scanner.nextLine());
             if (select == 1 || select == 2 || select == 3) {
                 startNumber -= select;
@@ -18,10 +20,7 @@ public class Matches {
                 System.out.println("Write number on 1 to 3");
             }
         }
-        if (flagPlayer % 2 == 0) {
-            System.out.println("Win 1st player");
-        } else {
-            System.out.println("Win 2d player");
-        }
+        String winPlayer = (flagPlayer % 2 == 0) ? "Win 1st player" : "Win 2d player";
+        System.out.println(winPlayer);
     }
 }
