@@ -1,6 +1,6 @@
 package ru.job4j.oop.vehicle;
 
-public class Buss extends Transport {
+public class Buss implements Vehicle {
     @Override
     public void move() {
         System.out.println("raid on street");

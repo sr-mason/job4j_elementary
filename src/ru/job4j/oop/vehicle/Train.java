@@ -1,6 +1,6 @@
 package ru.job4j.oop.vehicle;
 
-public class Train extends Transport {
+public class Train implements Vehicle {
     @Override
     public void move() {
         System.out.println("raid on rails");
